@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>open console for output</h1>
+
+
+
+    <script>
+
+        // question 26
+
+        
+        function books(sel){
+            
+            let book ={
+                "social" : 200,
+                "science" : 400,
+                "stories"   : 300,
+                "marketing" : 450,
+                "java" : 600,
+                "python" : 700
+            };
+            
+            let bok = Object.keys(book);
+            console.log(bok)
+            let price = Object.values(book);
+            console.log(price)
+            let sum =0;
+            
+            for(i = 0; i< bok.length;i++){
+                if (bok[i] == sel){
+                    sum = sum + price[i]
+                };
+                
+            };
+            
+            return sum;
+            
+        }
+
+        let sel = prompt("Select Book : ").split(" ");
+        console.log(books(sel));
+
+    
+        
+        
+        // question 27
+        
+        
+        function ratings(rate){
+            let movieRate=0
+            for(i=0;i<rate.length;i++){
+                movieRate+= +rate[i]
+            }
+            let average=movieRate/rate.length
+            console.log(average)
+        }
+        let rate=prompt("enter movie ratings out of 5 ").split(" ")
+        ratings(rate)
+        
+
+
+     // question 28
+     
+     
+     function savings(inc,exp){
+         let savamt=inc-exp
+         if(savamt<=0){
+             console.log("think for your furture and try to save some money")
+         }
+         else{
+             console.log("good you have bright future")
+         }
+     }
+     let inc=prompt("enter your monthly income")
+     let exp=prompt("enter your monthly expenses")
+     savings(inc,exp)
+
+
+
+  
+
+     // question 29
+ 
+      function time (distance,speed){
+          let timeTaken=distance/speed
+          console.log(timeTaken)
+      }
+      let d=prompt("enter distance travelled ")
+      let s=prompt("enter speed per hr ")
+      time(d,s)
+        
+        
+        // question 30
+        
+function marks(mark){
+    let total=0
+    for(i=0;i<mark.length;i++){
+        total+= +mark[i]
+    }
+    console.log(total)
+    let average=total/mark.length
+    console.log(average)
+}
+let a=prompt("enter your marks").split(" ")
+marks(a)
+    </script>
+    
+</body>
+</html>
